@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="header1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+<body>
+    
+    <input type="button" value="call" onclick="Call()">
+    <input type="button" value="sms" onclick="Sms()">
+    <input type="button" value="save contact" onclick="SaveContact()">
+        <script type="text/javascript">
+            function Calll(){
+                document.write(name);
+            }
+        function Sms(){
+            var iframe = document.createElement("IFRAME");
+            iframe.setAttribute("src", "js-call:webToNativeCall");
+            // For some reason we need to set a non-empty size for the iOS6 simulator...
+            iframe.setAttribute("height", "1px");
+            iframe.setAttribute("width", "1px");
+            document.documentElement.appendChild(iframe);
+            iframe.parentNode.removeChild(iframe);
+            iframe = null;
+        }
+        function SaveContact(){
+        
+        }
+            </script>
+</html>
